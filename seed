@@ -1,0 +1,21 @@
+
+   UnexpectedValueException 
+
+  Invalid database connection [UsersTableSeeder].
+
+  at vendor/laravel/framework/src/Illuminate/Database/Console/DbCommand.php:81
+     77▕             (($db = $this->argument('connection')) ?? $this->laravel['config']['database.default'])
+     78▕         ];
+     79▕ 
+     80▕         if (empty($connection)) {
+  ➜  81▕             throw new UnexpectedValueException("Invalid database connection [{$db}].");
+     82▕         }
+     83▕ 
+     84▕         if (! empty($connection['url'])) {
+     85▕             $connection = (new ConfigurationUrlParser)->parseConfiguration($connection);
+
+      [2m+14 vendor frames [22m
+
+  15  artisan:16
+      Illuminate\Foundation\Application::handleCommand()
+
