@@ -17,10 +17,12 @@ class AuthController extends Controller
     public function loginSubmit(Request $request){
         // form validation
         $request->validate([
+            // rules
             'text_username'=>'required|email',
             'text_password'=>'required|min:6|max:16'
         ],
         [
+            // error messages
             'text_username.required'=>'O username é obrigatorio',
             'text_username.email'=>'O username deve ser um email valido',
             'text_password.required'=>'A passoword deve ser obrigatoria',
