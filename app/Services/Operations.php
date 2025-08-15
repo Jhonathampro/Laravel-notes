@@ -5,7 +5,7 @@ namespace App\Services;
 use Illuminate\Contracts\Encryption\DecryptException;
 use Illuminate\Support\Facades\Crypt;
 
-class Oprerations
+class Operations
 {
     public static function decryptId($value) {
         // chec if $value is encrypted
