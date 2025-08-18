@@ -5,7 +5,7 @@ namespace App\Services;
 use Illuminate\Contracts\Encryption\DecryptException;
 use Illuminate\Support\Facades\Crypt;
 
-class Oprerations
+class Operations
 {
     public static function decryptId($value) {
         // chec if $value is encrypted
@@ -13,8 +13,9 @@ class Oprerations
             $value = Crypt::decrypt($value);
 
         } catch (DecryptException $e){
-            return redirect()->route('home');
+           return null;
         }
         return $value;
     }
+//return redirect()->route('home');
 }
